@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export default function ColorDisplay() {
+export default function GenerateHexColor() {
   const [hexColor, setHexColor] = useState("#ffffff");
 
   const generateRandomColor = () => {
@@ -16,14 +16,6 @@ export default function ColorDisplay() {
   const changeBackgroundColor = () => {
     const newColor = generateRandomColor();
     setHexColor(newColor);
-    // document.body.style.backgroundColor = newColor;
-    document.getElementsByClassName("Box0")[0].style.backgroundColor = newColor;
+    document.body.style.backgroundColor = newColor;
   };
-  return (
-    <div className="color-display">
-      <div className="Box0" onClick={changeBackgroundColor}>
-        {hexColor}
-      </div>
-    </div>
-  );
 }
