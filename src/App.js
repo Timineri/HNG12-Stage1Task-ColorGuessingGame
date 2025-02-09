@@ -1,4 +1,5 @@
 import ColorGuessingGame from "./ColorGuessingGame";
+import "./index.css";
 function App() {
   return (
     <div className="color-game">

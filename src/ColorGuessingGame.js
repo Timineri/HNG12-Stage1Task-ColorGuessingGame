@@ -28,7 +28,7 @@ const ColorGuessingGame = () => {
   const handleGuess = (color) => {
     if (color === targetColor) {
       setScore((prev) => prev + 1);
-      setMessage("✅ Correct! Generating new colors...");
+      setMessage("🎉Correct! Generating new colors...");
       setTimeout(generateColors, 1000);
     } else {
       setMessage("❌ Wrong guess! Try again.");
@@ -89,8 +89,14 @@ const ColorGuessingGame = () => {
         onClick={handleReset}
         style={{
           marginTop: "2em",
-          padding: ".5em",
+          padding: "1em",
           backgroundColor: "rgb(211, 190, 190)",
+          border: "none",
+          borderRadius: "8px",
+          cursor: "pointer",
+          boxShadow: "2px 2px 5px rgba(0, 0, 0, 0.2)",
+          fontFamily: "Georgia",
+          fontWeight: "bold",
         }}
       >
         New Game
